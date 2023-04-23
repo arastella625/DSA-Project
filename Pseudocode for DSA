@@ -28,7 +28,9 @@ Node.cpp:
 Segment.h:
 // Constructor takes an input array and builds a segment tree for it.
 // Initialize a insert and search method
-// Search for the sum of the values in the range [start, end] of the original array.			// Insert a value at a specific index in the original array and update the segment tree.               	// Write the structure of the segment tree to a Graphviz file.
+// Search for the sum of the values in the range [start, end] of the original array.
+// Insert a value at a specific index in the original array and update the segment tree.
+// Write the structure of the segment tree to a Graphviz file.
 
 Segment.cpp:
 // get the size of the input array
