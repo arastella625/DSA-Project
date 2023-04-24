@@ -157,7 +157,7 @@ void SegmentTree::printDotFile(Node* node, ofstream& outfile) {
 }
 int main() {
 	// Open input file
-    ifstream infile("input.txt");
+    ifstream infile("mock_dataset_1.txt");
     int n;
     // Read in size of input array
     infile >> n;
@@ -169,9 +169,14 @@ int main() {
 	// Construct a SegmentTree object with the array
     SegmentTree tree(arr);
 	// Output the SegmentTree in DOT format to a file
-    tree.printDotFile("output.dot");
-	// Close input file and exit
+    tree.printDotFile("output1.dot");
+    std::cout << "Initial tree printed: output1.dot" << std::endl;
+    // perform an insert operation
+    tree.insert(4, 3); // insert value 3 at index 4
+    tree.printDotFile("output2.dot"); 
+    std::cout << "TEST CASE #1: inserted value 3 at index 4. Printed updated tree: output2.dot" << std::endl;
+    // perform a search operation
+    std::cout << "TEST CASE #2: performing search operation on indexes 3 through 5..." << std::endl;
+    std::cout <<"The result is: " << tree.search(3, 5) << std::endl;
     return 0;
 }
-
-
