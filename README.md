@@ -1,7 +1,7 @@
 <p align="center">CSC 212 DSA Project: Segment Trees<br>Developed by Amber Rastella, Giorgio Florentino, Junsheng Wu, and Michael Tedeschi<hr></p>
 
 <b>Summary:</b><br>
-Our project is an implementation of a segmented tree class called <code>SegmentTree</code>. Taking in an array of integers, the tree is built recursively from the bottom-up. The leaf nodes at the bottom represent each of the individual integers in the array. As we work our way up the tree, the nodes in the middle represent sums of the child nodes. Because the nodes in the middle are made up of <i>segments</i> of sums of the children, we see how the structure gets its name: Segment Tree. Finally at the top, we have the root node which is the sum of all integers in the input array. We use a method called <code>::insert()</code> to populate this tree, as well as update values later on. Another method, <code>::search()</code>, allows us to get the sum of a given range of indices of the input array utilizing this tree. Both of these methods run in <code>O(log n)</code>.
+Our project is an implementation of a segment tree class called <code>SegmentTree</code>. Taking in an array of integers, the tree is built recursively from the bottom-up. The leaf nodes at the bottom represent each of the individual integers in the array. As we work our way up the tree, the nodes in the middle represent sums of the child nodes. Because the nodes in the middle are made up of <i>segments</i> of sums of the children, we see how the structure gets its name: Segment Tree. Finally at the top, we have the root node which is the sum of all integers in the input array. We use a method called <code>::insert()</code> to populate this tree, as well as update values later on. Another method, <code>::search()</code>, allows us to get the sum of a given range of indices of the input array utilizing this tree. Both of these methods run in <code>O(log n)</code>. A method called <code>::printDotFile()</code> allows for generation of a .dot file, providing a nice visualization of the tree.
 <br><br>
 <b>Feature list:</b>
 <ul>
@@ -9,14 +9,14 @@ Our project is an implementation of a segmented tree class called <code>SegmentT
   <ol>
     <li><code>::insert()</code> method for populating SegmentTree with integers and updating values at a given index</li>
     <li><code>::search()</code> method for returning the sum of a given range of indices</li>
-    <li><code>::printDotFile()</code> method for creating output DOT file to visualize the tree</li>
+    <li><code>::printDotFile()</code> method for creating output .dot file to visualize the tree</li>
   </ol>
   <li>Documentation for <code>SegmentTree</code> class and the above methods is included in the <b>Documentation</b> section of this page</li>
-  <li>Unit test cases for each of the above methods</li>
+  <li>Test cases & sample inputs for each of the methods in the source file</li>
 </ul>
 <br>
 <b>Planning:</b><br>
-Because a <code>SegmentTree</code> is a more <i>abstract</i> data structure than some other types of objects, we do not pass any command line arguments into the program. It is expected that developers utilizing this code will include the class in larger programs and utilize our documentation here in order to make the <code>SegmentTree</code> fit their use-cases. For the sake of demonstration, we have also opted to include two unit test cases showing the functionality of the <code>::insert()</code> and <code>::search()</code> methods.<br><br>Under the hood, we are utilizing overloaded recursive functions to navigate the tree and carry out operations, such as reading ranges or updating values.
+Because a <code>SegmentTree</code> is a more <i>abstract</i> data structure than some other types of objects, we do not pass any command line arguments into the program. It is expected that developers utilizing this code will include the class in larger programs and utilize our documentation here in order to make the <code>SegmentTree</code> fit their use-cases. For the sake of demonstration, we have also opted to include test cases & sample inputs showing the functionality of the <code>::insert()</code> and <code>::search()</code> methods.<br><br>Under the hood, we are utilizing overloaded recursive functions to navigate the tree and carry out operations, such as reading ranges or updating values.
  <br><br>
  <b>Compilation Instructions:</b>
  <ul><li>The following command will compile the program using G++: <code>g++ segment.cpp -o programName</code></li></ul>
