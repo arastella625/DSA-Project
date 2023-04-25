@@ -3,15 +3,13 @@
 <b>Summary:</b><br>
 Our project is an implementation of a segment tree class called <code>SegmentTree</code>. Taking in an array of integers, the tree is built recursively from the bottom-up. The leaf nodes at the bottom represent each of the individual integers in the array. As we work our way up the tree, the nodes in the middle represent sums of the child nodes. Because the nodes in the middle are made up of <i>segments</i> of sums of the children, we see how the structure gets its name: Segment Tree. Finally at the top, we have the root node which is the sum of all integers in the input array. We use a method called <code>::insert()</code> to populate this tree, as well as update values later on. Another method, <code>::search()</code>, allows us to get the sum of a given range of indices of the input array utilizing this tree. Both of these methods run in <code>O(log n)</code>. A method called <code>::printDotFile()</code> allows for generation of a .dot file, providing a nice visualization of the tree.
 <br><br>
-<b>Feature list:</b>
+<b>Feature List / Documentation:</b>
 <ul>
   <li>Implementation of <code>SegmentTree</code> class</li>
   <ol>
-    <li><code>::insert()</code> method for populating SegmentTree with integers and updating values at a given index</li>
-    <li><code>::search()</code> method for returning the sum of a given range of indices</li>
-    <li><code>::printDotFile()</code> method for creating output .dot file to visualize the tree</li>
-  </ol>
-  <li>Documentation for <code>SegmentTree</code> class and the above methods is included in the <b>Documentation</b> section of this page</li>
+    <li><code>::insert(index: int, value: int)</code> method for populating SegmentTree with integers and updating values at a given index</li>
+    <li><code>::search(start: int, end: int)</code> method for returning the sum of a given range of indices</li>
+    <li><code>::printDotFile(fileName: string)</code> method for creating output .dot file to visualize the tree</li>
   <li>Test cases & sample inputs for each of the methods in the source file</li>
 </ul>
 <br>
