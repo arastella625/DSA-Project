@@ -34,4 +34,13 @@ Because a <code>SegmentTree</code> is a more <i>abstract</i> data structure than
  <br>
  <b>Sample Input/Output Screenshots:</b>
  <br>
+ <img src="_resources/output1.png">
+ This is the visualized <b>output1.dot</b> file representation of the initial array created with the following input:<br>
+ <code>10
+2 5 -3 6 1 2 9 -4 7 8</code><br>
+Where <i>10</i> is the amount of numbers and the 2nd line contains each of the integers.
+Our sample code segment.cpp contains two test cases. The first is an insertion of the value 3 at the 4th index. Then a visualization <b>output2.dot</b>is produced:
+<img src="_resources/output2.png">
+We can see an updated value of 3 where the 1 used to be.
+Finally, we reach the next test case where demonstrate a search of index range 3 through 5. This produces a result of 11, which we can see visualized as a node above the leaf nodes on the graph. We can manually confirm this by counting the leaf nodes and summing the respective range.
 
